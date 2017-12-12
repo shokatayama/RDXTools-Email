@@ -1,0 +1,31 @@
+/*
+ * ビルドに関する設定を記載するファイル。
+ */
+
+// 利用するプラグイン
+apply plugin: 'java-library'
+
+// ライブラリ取得先のリポジトリ
+repositories {
+    jcenter()
+}
+
+// 依存関係を記載する
+dependencies {
+    // Apache Commons
+    api 'org.apache.commons:commons-lang3:3.7'
+    api 'org.apache.commons:commons-text:1.1'
+    api 'org.apache.commons:commons-collections4:4.1'
+    api 'org.apache.commons:commons-email:1.5'
+    api 'org.apache.commons:commons-configuration2:2.2'
+
+    // Velocity
+    api 'org.apache.velocity:velocity:1.7'
+
+    // Lombok
+    implementation 'org.projectlombok:lombok-maven:1.16.18.1'
+
+    // JUnit
+    testImplementation 'junit:junit:4.12'
+}
+
